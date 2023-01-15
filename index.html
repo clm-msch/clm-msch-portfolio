@@ -1,19 +1,120 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="Portfolio de Clément Maschéroni étudiant en 2ème année de Bachelor de Développeur Web">
-
-    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="./src/img/favicon.ico">
 
     <title>clm-msch</title>
 </head>
-<body>
-    
-    <h1>Portfolio de Clément Mascheroni est un Développeur web<span class="anime-title"></span></h1>
+
+<body >
+    <!-- <header class="bg-gray-800 fixed text-white p-4">
+        <nav>
+            <ul class="flex flex-start">
+                <li class="mr-6">
+                    <a href="#about" class="text-white">A propos</a>
+                </li>
+                <li class="mr-6">
+                    <a href="#projects" class="text-white">Projets</a>
+                </li>
+                <li>
+                    <a href="#contact" class="text-white">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto flex items-center justify-between py-3">
+          <a class="text-lg font-medium" href="#">Clément Maschéroni</a>
+          <div class="relative">
+            <input type="checkbox" class="hidden" id="menu-toggle">
+            <label for="menu-toggle" class="block text-gray-500 cursor-pointer">
+              <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+              </svg>
+            </label>
+            <ul class="absolute right-0 py-2 mt-3 text-gray-600 bg-white rounded-lg shadow-xl hidden">
+              <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white" href="#">Projets</a></li>
+              <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white" href="#">À propos</a></li>
+              <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+    <main class="text-gray-800 p-4 flex justify-center">
+        <div class="w-1/2">
+            <h1 class="text-3xl font-medium">Clément Mascheroni est un Développeur web<span
+                    class="anime-title text-indigo-500"></span>
+            </h1>
+            <p class="text-gray-700">Je suis un développeur web étudiant en 2ème année de Bachelor à l'Ecole Supérieure
+                du Digitale de Paris. Je suis passionné par la création de sites web innovants et performants. Mon
+                esprit créatif et ma curiosité m'ont permis de développer des compétences en HTML, CSS, JavaScript et
+                l'UI Design. Je suis actuellement en apprentissage des outils Vue.js et Node.js pour étendre mes
+                compétences et me permettre de créer des applications web plus modernes et évoluées. Je suis constamment
+                à la recherche de nouveaux défis et de nouvelles opportunités pour améliorer mes compétences et étendre
+                mes connaissances dans le domaine du développement web. </p>
+        </div>
+        <div class="w-1/2">
+            <img class="rounded-full h-64 w-64" src="/src/img/image-me.jpg">
+        </div>
+    </main>
+
+<!-- -->
+
+    <section id="projects" class="bg-white p-4">
+        <h1 class="text-lg">Mes projets</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="card rounded-lg bg-gray-800">
+                <img class="w-full h-64 object-cover object-center rounded-t-lg" src="src/img/image-projet-3.png" alt="Projet 1">
+                <div class="card-content p-4 text-white">
+                    <h2 class="text-xl font-medium">Projet 1</h2>
+                    <p class="text-gray-300">Description courte du projet 1.</p>
+                    <button href="#" class="bg-indigo-500 text-white p-2 w-full rounded-lg">En savoir plus</button>
+                </div>
+            </div>
+            <div class="card rounded-lg bg-gray-800">
+                <img class="w-full h-64 object-cover object-center rounded-t-lg" src="src/img/image-projet-3.png" alt="Projet 2">
+                <div class="card-content p-4 text-white">
+                    <h2 class="text-xl font-medium">Projet 2</h2>
+                    <p class="text-gray-300">Description courte du projet 2.</p>
+                    <button href="#" class="bg-indigo-500 text-white p-2 w-full rounded-lg">En savoir plus</button>
+                </div>
+            </div>
+            <div class="card rounded-lg bg-gray-800">
+                <img class="w-full h-64 object-cover object-center rounded-t-lg" src="src/img/image-projet-3.png" alt="Projet 3">
+                <div class="card-content p-4 text-white">
+                    <h2 class="text-xl font-medium">Projet 3</h2>
+                    <p class="text-gray-300">Description courte du projet 3.</p>
+                    <button href="#" class="bg-indigo-500 text-white p-2 w-full rounded-lg">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="p-4">
+        <h1 class="text-lg">Me contacter</h1>
+        <form class="w-full">
+            <label class="block mb-2" for="name">Nom :</label>
+            <input class="bg-gray-200 p-2 w-full rounded-lg" type="text" id="name" name="name"><br>
+            <label class="block mb-2" for="email">Email :</label>
+            <input class="bg-gray-200 p-2 w-full rounded-lg" type="email" id="email" name="email"><br>
+            <label class="block mb-2" for="message">Message :</label>
+            <textarea class="bg-gray-200 p-2 w-full rounded-lg" id="message" name="message"></textarea><br>
+            <input class="bg-indigo-500 text-white p-2 w-full rounded-lg" type="submit" value="Envoyer">
+        </form>
+    </section>
+    </main>
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        Fait avec le ❤️ par Clément Mascheroni
+    </footer>
+
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
