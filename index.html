@@ -8,26 +8,40 @@
 			content="Portfolio de Clément Maschéroni étudiant en 2ème année de Bachelor de Développeur Web"
 		/>
 		<link rel="icon" href="./src/img/favicon.ico" />
-		<link rel="stylesheet" href="style/index-style.css" />
-
+		<link rel="stylesheet" href="stylesheet.css" />
 		<title>clm-msch</title>
 	</head>
+	<body>
+		<nav class="navbar">
 
-	<body style="background-color: #e6e8fc">
-		<nav>
-			<ul>
-				<li><img src="src/img/logo.svg" alt="" /></li>
-				<li>A propos</li>
-				<li>Mes expériences</li>
-				<li>Mes projets</li>
-				<li><button>Me contacter</button></li>
+			<div class="nav-logo">
+				<img src="src/img/logo.svg" alt="" />
+			</div>
+
+			<ul class="nav-links">
+				<li class="nav-item"><a href="#about">A propos</a></li>
+				<li class="nav-item" href="#">
+					<a href="experiences">Mes expériences</a>
+				</li>
+				<li class="nav-item"><a href="#projects">Mes projets</a></li>
 			</ul>
+
+			<div class="nav-button">
+				<a class="button-primary-small" href="#contact">Me contacter</a>
+			</div>
+
 		</nav>
 
+
 		<header>
+			<!-- <div class="header-text"> -->
 			<h1>Clément Mascheroni</h1>
-			<h2>Je suis un Développeur <span>Web Créatif</span> .</h2>
-			<button>Me contacter</button>
+			<h2>Je suis un Développeur Web <span class="anime-title">Créatif</span> .</h2>
+			<script src="script.js"></script>
+			<a class="button-primary">Me contacter</a>
+			<a href="#apropos"
+				><img src="/src/icon/chevron-down.svg" alt=""
+			/></a>
 		</header>
 
 		<main>
