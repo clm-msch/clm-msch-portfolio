@@ -1,9 +1,3 @@
 # clm-msch-portfolio-2023
-My personal portfolio 🚧in build🚧
+My personal portfolio
 
-How to launch the projet : 
-
-```bash
-npm install
-npm run dev
-```
