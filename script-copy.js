@@ -11,23 +11,10 @@ function updateText() {
 
 setInterval(updateText, 2000);
 
-const sr = ScrollReveal({
-  duration: 1000,
-  delay: 300,
-  easing: 'ease',
-  reset: false,
-});
-
-sr.reveal('.btn-scroll', {
-  origin: 'bottom',
-  distance: '20px',
-  scale: 0.9,
-});
-
-// Fonction pour l'animation de scroll en douceur
+// Fonction pour l'animation de défilement en douceur
 function smoothScroll(target, duration) {
   var target = document.querySelector(target);
-  var targetPosition = target.getBoundingClientRect().top;
+  var targetPosition = target.offsetTop;
   var startPosition = window.pageYOffset;
   var distance = targetPosition - startPosition;
   var startTime = null;
@@ -40,18 +27,27 @@ function smoothScroll(target, duration) {
     if (timeElapsed < duration) requestAnimationFrame(animation);
   }
 
+  // Fonction pour l'effet d'accélération et de décélération
   function ease(t, b, c, d) {
     t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
+    if (t < 1) return c / 2 * t * t + b;
     t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
+    return -c / 2 * (t * (t - 2) - 1) + b;
   }
 
   requestAnimationFrame(animation);
 }
 
-// Ajouter un gestionnaire d'événements au bouton pour déclencher l'animation de scroll en douceur
-var scrollBtn = document.querySelector(".scroll-btn");
-scrollBtn.addEventListener("click", function () {
-  smoothScroll(".content-section", 1000);
-}); 
+// Ajout d'événements aux liens de navigation pour déclencher l'animation de scroll en douceur
+var navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    var target = this.getAttribute('data-target');
+    smoothScroll(target, 1000);
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+    });
+    this.classList.add('active');
+  });
+});
