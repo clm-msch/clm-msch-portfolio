@@ -1,129 +1,205 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			content="Portfolio de Clément Maschéroni étudiant en 2ème année de Bachelor de Développeur Web"
-		/>
-		<link rel="icon" href="./src/img/favicon.ico" />
-		<link rel="stylesheet" href="stylesheet.css" />
-		<title>clm-msch</title>
-	</head>
-	<body>
-		<nav class="navbar">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      content="Portfolio de Clément Maschéroni étudiant en 2ème année de Bachelor de Développeur Web"
+    />
+    <link rel="icon" href="./src/img/Logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>clm-msch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-width z-10 top-0 left-0 right-0 mt-4"
+    >
+      <section
+        class="container mx-auto flex items-center justify-center gap-12"
+      >
+        <a href="" class="font-bold text-md hidden sm:block"
+          ><img src="/src/img/Logo.svg"
+        /></a>
+        <a href="#" data-target="#section1" class="font-bold text-md nav-link"
+          >A propos</a
+        >
+        <!-- <a href="#" data-target="#section2" class="font-bold text-md nav-link">Mes expériences</a> -->
+        <a href="#" data-target="#section3" class="font-bold text-md nav-link"
+          >Mes projets</a
+        >
+        <a
+          class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md hidden md:block"
+          href="mailto:clementmapro@gmail.com"
+        >
+          Me contacter
+        </a>
+      </section>
+    </nav>
 
-			<div class="nav-logo">
-				<img src="src/img/logo.svg" alt="" />
-			</div>
+    <!-- Header -->
+    <header
+      class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover text-white"
+      style="background-image: url('/src/img/background.svg')"
+    >
+      <br />
+      <br />
+      <h1 class="text-6xl font-bold mb-4 text-center">
+        Clément <br />
+        Maschéroni
+      </h1>
+      <h2 class="text-2xl font-bold mb-8">
+        Développeur Web <span class="anime-title">Créatif</span>
+      </h2>
+      <a
+        class="px-4 py-3 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-xl"
+        href="mailto:clementmapro@gmail.com"
+      >
+        Me contacter
+      </a>
+      <br />
+      <br />
+      <button data-target="#section1" class="animate-bounce nav-link">
+        <img src="/src/icon/chevron-down.svg" />
+      </button>
+    </header>
 
-			<ul class="nav-links">
-				<li class="nav-item"><a href="#about">A propos</a></li>
-				<li class="nav-item" href="#">
-					<a href="experiences">Mes expériences</a>
-				</li>
-				<li class="nav-item"><a href="#projects">Mes projets</a></li>
-			</ul>
+    <!-- ALL CONTENT -->
+    <div class="bg-stone-900 p-4">
+      <br />
+      <section id="section1" class="content-section">
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 class="text-3xl font-bold mb-4 text-white">A propos</h1>
+        <p class="text-white mt-2 mb-2">
+          Je suis un développeur web étudiant en 2ème année de Bachelor à
+          l'Ecole Supérieure du Digitale de Paris. Je suis passionné par la
+          technologie depuis mon plus jeune âge, <br />
+          cette passion, je met tous en œuvre pour en faire mon métier et j’ai
+          donc orienté mon parcours scolaire dans ce sens. Ma créativité et ma
+          curiosité m'ont permis de développer des compétences assez polyvalente
+          dans le domaine du digital mais surtout dans le développement web. Je
+          suis constamment à la recherche de nouveaux défis et d’expérience pour
+          améliorer mes compétences et étendre mes connaissances.
+        </p>
+        <br />
+      </section>
+      <!-- Content -->
+      <!-- <div id="section2" class="container mx-auto py-8 content-section">
+        <br>
+        <br><br>
+        <h3 class="text-3xl font-bold mb-4 text-white">Mes expériences</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Projet 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut
+              sapien at lectus vehicula dapibus. Suspendisse potenti.
+            </p>
+            <br>
+            <button class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md">En savoir plus</button>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Projet 2</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut
+              sapien at lectus vehicula dapibus. Suspendisse potenti.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Projet 3</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut
+              sapien at lectus vehicula dapibus. Suspendisse potenti.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Projet 4</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut
+              sapien at lectus vehicula dapibus. Suspendisse potenti.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br /> -->
 
-			<div class="nav-button">
-				<a class="button-primary-small" href="#contact">Me contacter</a>
-			</div>
-
-		</nav>
-
-
-		<header>
-			<!-- <div class="header-text"> -->
-			<h1>Clément Mascheroni</h1>
-			<h2>Je suis un Développeur Web <span class="anime-title">Créatif</span> .</h2>
-			<script src="script.js"></script>
-			<a class="button-primary">Me contacter</a>
-			<a href="#apropos"
-				><img src="/src/icon/chevron-down.svg" alt=""
-			/></a>
-		</header>
-
-		<main>
-			<div>
-				<h2>A propos</h2>
-				<p>
-					Je suis un développeur web étudiant en 2ème année de
-					Bachelor à l'Ecole Supérieure du Digitale de Paris. Je suis
-					passionné par la technologie depuis mon plus jeune âge,
-					cette passion, je met tous en œuvre pour en faire mon métier
-					et j’ai donc orienté mon parcours scolaire dans ce sens. Ma
-					créativité et ma curiosité m'ont permis de développer des
-					compétences assez polyvalente dans le domaine du digital
-					mais surtout dans le développement web. Je suis constamment
-					à la recherche de nouveaux défis et d’expérience pour
-					améliorer mes compétences et étendre mes connaissances.
-				</p>
-			</div>
-			<section>
-				<h2>Mes expériences</h2>
-				<ul>
-					<li>
-						<h3>
-							BAC / STI2D option Science d’Information Numérique
-						</h3>
-						<h4>2018 - 2020 / Mention Assez Bien</h4>
-						<p>Lycée Polyvalent Jean Jaurès - Argenteuil</p>
-					</li>
-					<li>
-						<h3>
-							BAC+1 / DUT Métiers du Multimédia et de l’Internet
-						</h3>
-						<h4>2020 - 2021 / Validation de la première année</h4>
-						<p>IUT Gustave Eiffel - Champs-sur-Marne</p>
-					</li>
-					<li>
-						<h3>En 2 éme année / Bachelor Développeur Web</h3>
-						<h4>2022 - 2024 / En cours</h4>
-						<p>Ecole Supérieure du Digitale - Paris</p>
-					</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Mes projets</h2>
-				<ul>
-					<li>
-						<h3>Projet 1</h3>
-						<h4>2021</h4>
-						<p>Projet de fin de première année de DUT MMI</p>
-					</li>
-					<li>
-						<h3>Projet 2</h3>
-						<h4>2021</h4>
-						<p>Projet de fin de première année de DUT MMI</p>
-					</li>
-					<li>
-						<h3>Projet 3</h3>
-						<h4>2021</h4>
-						<p>Projet de fin de première année de DUT MMI</p>
-					</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Me contacter</h2>
-				<form>
-					<label for="name">Nom :</label>
-					<input type="text" id="name" name="name" /><br />
-					<label for="email">Email :</label>
-					<input type="email" id="email" name="email" /><br />
-					<label for="message">Message :</label>
-					<textarea id="message" name="message"></textarea><br />
-					<input
-						class="bg-indigo-500 text-white p-2 w-full rounded-lg"
-						type="submit"
-						value="Envoyer"
-					/>
-				</form>
-			</section>
-		</main>
-
-		<footer>
-			<p>Fait avec le ❤️ par Clément Mascheroni</p>
-		</footer>
-	</body>
+      <!-- Content -->
+      <section id="section3" class="container mx-auto py-8 content-section">
+        <br />
+        <br />
+        <h3 class="text-3xl font-bold mb-4 text-white">Mes projets</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Devclicker</h4>
+            <p>
+              Jeu sur navigateur de type "clicker" sur le thème du dev.
+              L'objectif est d'orienté le jeu vers un outil pédagogique pour
+              apprendre le développement web. [en cours]
+            </p>
+            <p class="italic text-sm">Vue.js | Firebase | Tailwind</p>
+            <br />
+            <a
+              href="https://devclicker.com/"
+              target="_blank"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              >En savoir plus</a
+            >
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Powernotes</h4>
+            <p>
+              Web Application qui permet de créer et gérez ses notes. L'objectif
+              a long terme et de permettre le partage de note. [en cours]
+            </p>
+            <p class="italic text-sm">Vue.js | Firebase | Tailwind</p>
+            <br />
+            <a
+              href="https://powernotes.clm-msch.fr/#/"
+              target="_blank"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              >En savoir plus</a
+            >
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Snappet</h4>
+            <p>
+              Projet de cours ayant pour but de créer un api REST qui permet la
+              gestion de bout de code.
+            </p>
+            <p class="italic text-sm">Node.js | MySQL | Express.js</p>
+            <br />
+            <a
+              href="https://github.com/clm-msch/snappet-project"
+              target="_blank"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              >En savoir plus</a
+            >
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <h4 class="text-xl font-bold mb-2">Maschenger</h4>
+            <p>
+              Projet de cours dont le but est la création d'une messagerie
+              instantanée avec un système de chat en temps réel.
+            </p>
+            <p class="italic text-sm">Vue.js | Firebase</p>
+            <br />
+            <a
+              href="https://github.com/clm-msch/maschenger-project"
+              target="_blank"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              >En savoir plus</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="text-center p-4 bg-stone-800">
+      <p class="font-bold text-white">Fait avec le ❤️ par Clément Mascheroni</p>
+    </footer>
+    <script src="script-copy.js"></script>
+  </body>
 </html>
