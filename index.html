@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav
+    <!-- <nav
       class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-width z-10 top-0 left-0 right-0 mt-4"
     >
       <section
@@ -25,19 +25,42 @@
         <a href="#" data-target="#section1" class="font-bold text-md nav-link"
           >A propos</a
         >
-        <!-- <a href="#" data-target="#section2" class="font-bold text-md nav-link">Mes expériences</a> -->
         <a href="#" data-target="#section3" class="font-bold text-md nav-link"
           >Mes projets</a
         >
         <a
-          class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md hidden md:block"
+          class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md hidden md:block hover:bg-gradient-to-l"
           href="mailto:clementmapro@gmail.com"
         >
           Me contacter
         </a>
       </section>
-    </nav>
-
+    </nav> -->
+    <nav
+    class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-width z-10 top-0 left-0 right-0 mt-4 rounded-full mx-64"
+  >
+    <section
+      class="container mx-auto flex items-center justify-between gap-12"
+    >
+      <a href="" class="font-bold text-md hidden sm:block"
+        ><img src="/src/img/Logo.svg"
+      /></a>
+      <a href="#" data-target="#section1" class="font-bold text-md nav-link"
+        >A propos</a
+      >
+      <a href="#" data-target="#section2" class="font-bold text-md nav-link">Mes expériences</a>
+      <a href="#" data-target="#section3" class="font-bold text-md nav-link"
+        >Mes projets</a
+      >
+      <a
+        class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hidden md:block hover:bg-gradient-to-l"
+        href="mailto:clementmapro@gmail.com"
+      >
+        Me contacter
+      </a>
+    </section>
+  </nav>
+  
     <!-- Header -->
     <header
       class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover text-white"
@@ -53,7 +76,7 @@
         Développeur Web <span class="anime-title">Créatif</span>
       </h2>
       <a
-        class="px-4 py-3 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-xl"
+        class="px-4 py-3 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-xl hover:bg-gradient-to-l"
         href="mailto:clementmapro@gmail.com"
       >
         Me contacter
@@ -68,23 +91,26 @@
     <!-- ALL CONTENT -->
     <div class="bg-stone-900 p-4">
       <br />
-      <section id="section1" class="content-section">
+      <section id="section1" class="container mx-auto py-8 content-section">
         <br />
         <br />
         <br />
         <br />
         <h1 class="text-3xl font-bold mb-4 text-white">A propos</h1>
-        <p class="text-white mt-2 mb-2">
-          Je suis un développeur web étudiant en 2ème année de Bachelor à
-          l'Ecole Supérieure du Digitale de Paris. Je suis passionné par la
-          technologie depuis mon plus jeune âge, <br />
-          cette passion, je met tous en œuvre pour en faire mon métier et j’ai
-          donc orienté mon parcours scolaire dans ce sens. Ma créativité et ma
-          curiosité m'ont permis de développer des compétences assez polyvalente
-          dans le domaine du digital mais surtout dans le développement web. Je
-          suis constamment à la recherche de nouveaux défis et d’expérience pour
-          améliorer mes compétences et étendre mes connaissances.
-        </p>
+        <div class="bg-white rounded-lg p-4">
+          <p class="mt-2 mb-2">
+            Je suis un développeur web étudiant en 2ème année de Bachelor à
+            l'Ecole Supérieure du Digitale de Paris. Je suis passionné par la
+            technologie depuis mon plus jeune âge, <br />
+            cette passion, je met tous en œuvre pour en faire mon métier et j’ai
+            donc orienté mon parcours scolaire dans ce sens. Ma créativité et ma
+            curiosité m'ont permis de développer des compétences assez
+            polyvalente dans le domaine du digital mais surtout dans le
+            développement web. Je suis constamment à la recherche de nouveaux
+            défis et d’expérience pour améliorer mes compétences et étendre mes
+            connaissances.
+          </p>
+        </div>
         <br />
       </section>
       <!-- Content -->
@@ -131,9 +157,15 @@
       <section id="section3" class="container mx-auto py-8 content-section">
         <br />
         <br />
+        <br />
+
         <h3 class="text-3xl font-bold mb-4 text-white">Mes projets</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="bg-white rounded-lg p-4 shadow-md">
+            <img
+              src="src/img/project-content/project1.png"
+              class="rounded-lg mb-2 w-screen"
+            />
             <h4 class="text-xl font-bold mb-2">Devclicker</h4>
             <p>
               Jeu sur navigateur de type "clicker" sur le thème du dev.
@@ -145,22 +177,26 @@
             <a
               href="https://devclicker.com/"
               target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
               >En savoir plus</a
             >
           </div>
           <div class="bg-white rounded-lg p-4 shadow-md">
+            <img
+              src="src/img/project-content/project2.png"
+              class="rounded-lg mb-2 w-screen"
+            />
             <h4 class="text-xl font-bold mb-2">Powernotes</h4>
             <p>
-              Web Application qui permet de créer et gérez ses notes. L'objectif
-              a long terme et de permettre le partage de note. [en cours]
+              Web App qui permet de créer et gérez ses notes. L'objectif a long
+              terme et de permettre le partage de note. [en cours]
             </p>
             <p class="italic text-sm">Vue.js | Firebase | Tailwind</p>
             <br />
             <a
-              href="https://powernotes.clm-msch.fr/#/"
+              href="https://powernotes.clm-msch.fr"
               target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
               >En savoir plus</a
             >
           </div>
@@ -175,7 +211,7 @@
             <a
               href="https://github.com/clm-msch/snappet-project"
               target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
               >En savoir plus</a
             >
           </div>
@@ -190,14 +226,15 @@
             <a
               href="https://github.com/clm-msch/maschenger-project"
               target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md"
+              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
               >En savoir plus</a
             >
           </div>
         </div>
       </section>
     </div>
-    <footer class="text-center p-4 bg-stone-800">
+    <footer class="text-center p-4 bg-stone-800"
+    style="background-image: url('/src/img/background.svg'); background-size: cover;">
       <p class="font-bold text-white">Fait avec le ❤️ par Clément Mascheroni</p>
     </footer>
     <script src="script-copy.js"></script>
