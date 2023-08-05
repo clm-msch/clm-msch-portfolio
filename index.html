@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      content="Portfolio de Clément Maschéroni étudiant en 2ème année de Bachelor de Développeur Web"
-    />
-    <link rel="icon" href="./src/img/Logo.svg" />
-    <link rel="stylesheet" href="style.css" />
-    <title>clm-msch</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <!-- <nav
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			content="Portfolio de Clément Maschéroni étudiant en 2ème année de Bachelor de Développeur Web"
+		/>
+		<link rel="icon" href="./src/img/Logo.svg" />
+		<link rel="stylesheet" href="style.css" />
+		<title>clm-msch</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<!-- <nav
       class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-width z-10 top-0 left-0 right-0 mt-4"
     >
       <section
@@ -29,92 +30,110 @@
           >Mes projets</a
         >
         <a
-          class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md hidden md:block hover:bg-gradient-to-l"
+          class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-lg text-md hidden md:block hover:bg-gradient-to-l"
           href="mailto:clementmapro@gmail.com"
         >
           Me contacter
         </a>
       </section>
     </nav> -->
-    <nav
-    class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-width z-10 top-0 left-0 right-0 mt-4 rounded-full mx-64"
-  >
-    <section
-      class="container mx-auto flex items-center justify-between gap-12"
-    >
-      <a href="" class="font-bold text-md hidden sm:block"
-        ><img src="/src/img/Logo.svg"
-      /></a>
-      <a href="#" data-target="#section1" class="font-bold text-md nav-link"
-        >A propos</a
-      >
-      <a href="#" data-target="#section2" class="font-bold text-md nav-link">Mes expériences</a>
-      <a href="#" data-target="#section3" class="font-bold text-md nav-link"
-        >Mes projets</a
-      >
-      <a
-        class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hidden md:block hover:bg-gradient-to-l"
-        href="mailto:clementmapro@gmail.com"
-      >
-        Me contacter
-      </a>
-    </section>
-  </nav>
-  
-    <!-- Header -->
-    <header
-      class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover text-white"
-      style="background-image: url('/src/img/background.svg')"
-    >
-      <br />
-      <br />
-      <h1 class="text-6xl font-bold mb-4 text-center">
-        Clément <br />
-        Maschéroni
-      </h1>
-      <h2 class="text-2xl font-bold mb-8">
-        Développeur Web <span class="anime-title">Créatif</span>
-      </h2>
-      <a
-        class="px-4 py-3 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-xl hover:bg-gradient-to-l"
-        href="mailto:clementmapro@gmail.com"
-      >
-        Me contacter
-      </a>
-      <br />
-      <br />
-      <button data-target="#section1" class="animate-bounce nav-link">
-        <img src="/src/icon/chevron-down.svg" />
-      </button>
-    </header>
+		<nav style="margin: 0 auto; margin-top: 4px" class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-2/3 z-10 top-0 left-0 right-0 rounded-full">
+            <div class="container mx-auto flex items-center justify-between gap-12">
+			<div class="flex items-center">
+			<a href=""><img src="src/img/Logo.svg" alt="Logo" /></a>	
+			</div>
+			<div class="hidden md:flex space-x-4">
+				<a href="#" data-target="#section1" class="font-bold text-md nav-link text-white">A propos</a>
+				<a href="#" data-target="#section2" class="font-bold text-md nav-link text-white">Mes expériences</a>
+				<a href="#" data-target="#section3" class="font-bold text-md nav-link text-white">Mes projets</a>
+			</div>
+			<div class="hidden lg:block">
+				<button class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md">
+					Me contacter
+				</button>
+			</div>
+			<div class="md:hidden lg:hidden">
+				<img src="src/icon/hamburger.svg" alt="Menu" class="w-6 h-6" id="menu-icon" />
+			</div>
+            </div>
+		</nav>
+		<div id="modal" class="hidden fixed z-10 inset-0 overflow-y-auto animate__animated" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+			<div class="flex items-center justify-center min-h-screen backdrop-blur-md">
+				<div class="bg-white p-4 rounded shadow-lg w-3/4 h-3/4">
+					<h2 id="modal-title" class="text-2xl font-bold mb-2">
+						Menu
+					</h2>
+					<div class="space-y-2">
+						<a href="#" class="font-bold text-md nav-link block">A propos</a>
+						<a href="#" class="font-bold text-md nav-link block">Mes expériences</a>
+						<a href="#" class="font-bold text-md nav-link block">Mes projets</a>
+                        <br>
+                        <button class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md">
+                        Me contacter
+                        </button>
+				</div>
+			</div>
+		</div>
+    </div>
+		<!-- Header -->
+		<header
+			class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover text-white"
+			style="background-image: url('/src/img/background.svg')"
+		>
+			<br />
+			<br />
+			<h1 class="text-6xl font-bold mb-4 text-center">
+				Clément <br />
+				Maschéroni
+			</h1>
+			<h2 class="text-2xl font-bold mb-8">
+				Développeur Web <span class="anime-title">Créatif</span>
+			</h2>
+			<a
+				class="px-4 py-3 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-xl"
+				href="mailto:clementmapro@gmail.com"
+			>
+				Me contacter
+			</a>
+			<br />
+			<br />
+			<button data-target="#section1" class="animate-bounce nav-link">
+				<img src="/src/icon/chevron-down.svg" />
+			</button>
+		</header>
 
-    <!-- ALL CONTENT -->
-    <div class="bg-stone-900 p-4">
-      <br />
-      <section id="section1" class="container mx-auto py-8 content-section">
-        <br />
-        <br />
-        <br />
-        <br />
-        <h1 class="text-3xl font-bold mb-4 text-white">A propos</h1>
-        <div class="bg-white rounded-lg p-4">
-          <p class="mt-2 mb-2">
-            Je suis un développeur web étudiant en 2ème année de Bachelor à
-            l'Ecole Supérieure du Digitale de Paris. Je suis passionné par la
-            technologie depuis mon plus jeune âge, <br />
-            cette passion, je met tous en œuvre pour en faire mon métier et j’ai
-            donc orienté mon parcours scolaire dans ce sens. Ma créativité et ma
-            curiosité m'ont permis de développer des compétences assez
-            polyvalente dans le domaine du digital mais surtout dans le
-            développement web. Je suis constamment à la recherche de nouveaux
-            défis et d’expérience pour améliorer mes compétences et étendre mes
-            connaissances.
-          </p>
-        </div>
-        <br />
-      </section>
-      <!-- Content -->
-      <!-- <div id="section2" class="container mx-auto py-8 content-section">
+		<!-- ALL CONTENT -->
+		<div class="bg-stone-900 p-4">
+			<br />
+			<section
+				id="section1"
+				class="container mx-auto py-8 content-section"
+			>
+				<br />
+				<br />
+				<br />
+				<br />
+				<h1 class="text-3xl font-bold mb-4 text-white">A propos</h1>
+				<div class="bg-white rounded-lg p-4">
+					<p class="mt-2 mb-2">
+						Je suis un développeur web étudiant en 2ème année de
+						Bachelor à l'Ecole Supérieure du Digitale de Paris. Je
+						suis passionné par la technologie depuis mon plus jeune
+						âge, <br />
+						cette passion, je met tous en œuvre pour en faire mon
+						métier et j’ai donc orienté mon parcours scolaire dans
+						ce sens. Ma créativité et ma curiosité m'ont permis de
+						développer des compétences assez polyvalente dans le
+						domaine du digital mais surtout dans le développement
+						web. Je suis constamment à la recherche de nouveaux
+						défis et d’expérience pour améliorer mes compétences et
+						étendre mes connaissances.
+					</p>
+				</div>
+				<br />
+			</section>
+			<!-- Content -->
+			<!-- <div id="section2" class="container mx-auto py-8 content-section">
         <br>
         <br><br>
         <h3 class="text-3xl font-bold mb-4 text-white">Mes expériences</h3>
@@ -126,7 +145,7 @@
               sapien at lectus vehicula dapibus. Suspendisse potenti.
             </p>
             <br>
-            <button class="px-3 py-2 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-lg text-md">En savoir plus</button>
+            <button class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-lg text-md">En savoir plus</button>
           </div>
           <div class="bg-white rounded-lg p-4 shadow-md">
             <h4 class="text-xl font-bold mb-2">Projet 2</h4>
@@ -153,90 +172,109 @@
       </div>
       <br /> -->
 
-      <!-- Content -->
-      <section id="section3" class="container mx-auto py-8 content-section">
-        <br />
-        <br />
-        <br />
+			<!-- Content -->
+			<section
+				id="section3"
+				class="container mx-auto py-8 content-section"
+			>
+				<br />
+				<br />
+				<br />
 
-        <h3 class="text-3xl font-bold mb-4 text-white">Mes projets</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-white rounded-lg p-4 shadow-md">
-            <img
-              src="src/img/project-content/project1.png"
-              class="rounded-lg mb-2 w-screen"
-            />
-            <h4 class="text-xl font-bold mb-2">Devclicker</h4>
-            <p>
-              Jeu sur navigateur de type "clicker" sur le thème du dev.
-              L'objectif est d'orienté le jeu vers un outil pédagogique pour
-              apprendre le développement web. [en cours]
-            </p>
-            <p class="italic text-sm">Vue.js | Firebase | Tailwind</p>
-            <br />
-            <a
-              href="https://devclicker.com/"
-              target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
-              >En savoir plus</a
-            >
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-md">
-            <img
-              src="src/img/project-content/project2.png"
-              class="rounded-lg mb-2 w-screen"
-            />
-            <h4 class="text-xl font-bold mb-2">Powernotes</h4>
-            <p>
-              Web App qui permet de créer et gérez ses notes. L'objectif a long
-              terme et de permettre le partage de note. [en cours]
-            </p>
-            <p class="italic text-sm">Vue.js | Firebase | Tailwind</p>
-            <br />
-            <a
-              href="https://powernotes.clm-msch.fr"
-              target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
-              >En savoir plus</a
-            >
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-md">
-            <h4 class="text-xl font-bold mb-2">Snappet</h4>
-            <p>
-              Projet de cours ayant pour but de créer un api REST qui permet la
-              gestion de bout de code.
-            </p>
-            <p class="italic text-sm">Node.js | MySQL | Express.js</p>
-            <br />
-            <a
-              href="https://github.com/clm-msch/snappet-project"
-              target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
-              >En savoir plus</a
-            >
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-md">
-            <h4 class="text-xl font-bold mb-2">Maschenger</h4>
-            <p>
-              Projet de cours dont le but est la création d'une messagerie
-              instantanée avec un système de chat en temps réel.
-            </p>
-            <p class="italic text-sm">Vue.js | Firebase</p>
-            <br />
-            <a
-              href="https://github.com/clm-msch/maschenger-project"
-              target="_blank"
-              class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-900 to-blue-500 text-white rounded-full text-md hover:bg-gradient-to-l"
-              >En savoir plus</a
-            >
-          </div>
-        </div>
-      </section>
-    </div>
-    <footer class="text-center p-4 bg-stone-800"
-    style="background-image: url('/src/img/background.svg'); background-size: cover;">
-      <p class="font-bold text-white">Fait avec le ❤️ par Clément Mascheroni</p>
-    </footer>
-    <script src="script-copy.js"></script>
-  </body>
+				<h3 class="text-3xl font-bold mb-4 text-white">Mes projets</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<img
+							src="src/img/project-content/project1.png"
+							class="rounded-lg mb-2 w-screen"
+						/>
+						<h4 class="text-xl font-bold mb-2">Devclicker</h4>
+						<p>
+							Jeu sur navigateur de type "clicker" sur le thème du
+							dev. L'objectif est d'orienté le jeu vers un outil
+							pédagogique pour apprendre le développement web. [en
+							cours]
+						</p>
+						<p class="italic text-sm">
+							Vue.js | Firebase | Tailwind
+						</p>
+						<br />
+						<a
+							href="https://devclicker.com/"
+							target="_blank"
+							class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md"
+							>En savoir plus</a
+						>
+					</div>
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<img
+							src="src/img/project-content/project2.png"
+							class="rounded-lg mb-2 w-screen"
+						/>
+						<h4 class="text-xl font-bold mb-2">Powernotes</h4>
+						<p>
+							Web App qui permet de créer et gérez ses notes.
+							L'objectif a long terme et de permettre le partage
+							de note. [en cours]
+						</p>
+						<p class="italic text-sm">
+							Vue.js | Firebase | Tailwind
+						</p>
+						<br />
+						<a
+							href="https://powernotes.clm-msch.fr"
+							target="_blank"
+							class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md"
+							>En savoir plus</a
+						>
+					</div>
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<h4 class="text-xl font-bold mb-2">Snappet</h4>
+						<p>
+							Projet de cours ayant pour but de créer un api REST
+							qui permet la gestion de bout de code.
+						</p>
+						<p class="italic text-sm">
+							Node.js | MySQL | Express.js
+						</p>
+						<br />
+						<a
+							href="https://github.com/clm-msch/snappet-project"
+							target="_blank"
+							class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md"
+							>En savoir plus</a
+						>
+					</div>
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<h4 class="text-xl font-bold mb-2">Maschenger</h4>
+						<p>
+							Projet de cours dont le but est la création d'une
+							messagerie instantanée avec un système de chat en
+							temps réel.
+						</p>
+						<p class="italic text-sm">Vue.js | Firebase</p>
+						<br />
+						<a
+							href="https://github.com/clm-msch/maschenger-project"
+							target="_blank"
+							class="px-3 py-2 mt-4 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md"
+							>En savoir plus</a
+						>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer
+			class="text-center p-4 bg-stone-800"
+			style="
+				background-image: url('/src/img/background.svg');
+				background-size: cover;
+			"
+		>
+			<p class="font-bold text-white">
+				Fait avec le 🤍 par Clément Mascheroni
+			</p>
+		</footer>
+		<script src="script-copy.js"></script>
+	</body>
 </html>
