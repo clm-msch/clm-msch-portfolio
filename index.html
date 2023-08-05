@@ -10,7 +10,10 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>clm-msch</title>
 		<script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -37,44 +40,93 @@
         </a>
       </section>
     </nav> -->
-		<nav style="margin: 0 auto; margin-top: 4px" class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-2/3 z-10 top-0 left-0 right-0 rounded-full">
-            <div class="container mx-auto flex items-center justify-between gap-12">
-			<div class="flex items-center">
-			<a href=""><img src="src/img/Logo.svg" alt="Logo" /></a>	
+		<nav
+			style="margin: 0 auto; margin-top: 4px"
+			class="bg-gray-300 bg-opacity-5 bg-blur shadow-inner text-white py-4 pr-4 pl-4 fixed w-2/3 z-10 top-0 left-0 right-0 rounded-full"
+		>
+			<div
+				class="container mx-auto flex items-center justify-between gap-12"
+			>
+				<div class="flex items-center">
+					<a href=""><img src="src/img/Logo.svg" alt="Logo" /></a>
+				</div>
+				<div class="hidden md:flex space-x-4">
+					<a
+						href="#"
+						data-target="#section1"
+						class="font-bold text-md nav-link text-white"
+						>A propos</a
+					>
+
+					<a
+						href="#"
+						data-target="#section3"
+						class="font-bold text-md nav-link text-white"
+						>Mes projets</a
+					>
+					<a
+						href="#"
+						data-target="#section2"
+						class="font-bold text-md nav-link text-gray-500"
+						>Coming soon</a
+					>
+				</div>
+				<div class="hidden lg:block">
+					<a
+						class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md"
+            href="mailto:clementmapro@gmail.com"
+            style="transform: scale(1.2);"
+					>
+						Me contacter
+					</a>
+				</div>
+				<div class="md:hidden lg:hidden">
+					<img
+						src="src/icon/hamburger.svg"
+						alt="Menu"
+						class="w-6 h-6"
+						id="menu-icon"
+					/>
+				</div>
 			</div>
-			<div class="hidden md:flex space-x-4">
-				<a href="#" data-target="#section1" class="font-bold text-md nav-link text-white">A propos</a>
-				<a href="#" data-target="#section2" class="font-bold text-md nav-link text-white">Mes expériences</a>
-				<a href="#" data-target="#section3" class="font-bold text-md nav-link text-white">Mes projets</a>
-			</div>
-			<div class="hidden lg:block">
-				<button class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md">
-					Me contacter
-				</button>
-			</div>
-			<div class="md:hidden lg:hidden">
-				<img src="src/icon/hamburger.svg" alt="Menu" class="w-6 h-6" id="menu-icon" />
-			</div>
-            </div>
 		</nav>
-		<div id="modal" class="hidden fixed z-10 inset-0 overflow-y-auto animate__animated" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-			<div class="flex items-center justify-center min-h-screen backdrop-blur-md">
+		<div
+			id="modal"
+			class="hidden fixed z-10 inset-0 overflow-y-auto animate__animated backdrop-blur-lg"
+			aria-labelledby="modal-title"
+			role="dialog"
+			aria-modal="true"
+		>
+			<div
+				class="flex items-center justify-center min-h-screen"
+			>
 				<div class="bg-white p-4 rounded shadow-lg w-3/4 h-3/4">
-					<h2 id="modal-title" class="text-2xl font-bold mb-2">
+					<h2 id="modal-title" class="text-2xl font-bold mb-2 text-center">
 						Menu
 					</h2>
-					<div class="space-y-2">
-						<a href="#" class="font-bold text-md nav-link block">A propos</a>
-						<a href="#" class="font-bold text-md nav-link block">Mes expériences</a>
-						<a href="#" class="font-bold text-md nav-link block">Mes projets</a>
-                        <br>
-                        <button class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md">
-                        Me contacter
-                        </button>
+					<div class="space-y-2 text-center">
+						<a href="#section1" class="font-bold text-md nav-link block"
+							>A propos</a
+						>
+						<a href="#section3" class="font-bold text-md nav-link block"
+							>Mes projets</a
+						>
+            <a
+						href="#"
+						class="font-bold text-md nav-link block text-gray-500"
+						>Coming soon</a
+					>
+						<br />
+						<a
+							class="px-3 py-2 bg-gradient-to-r from-purple-950 to-blue-700 text-white rounded-full text-md"
+              href="mailto:clementmapro@gmail.com"
+						>
+							Me contacter
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-    </div>
 		<!-- Header -->
 		<header
 			class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover text-white"
