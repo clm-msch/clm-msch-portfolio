@@ -51,3 +51,20 @@ navLinks.forEach(function(link) {
     this.classList.add('active');
   });
 });
+
+// Responsive menu modal
+document.getElementById("menu-icon").addEventListener("click", function () {
+  var modal = document.getElementById("modal");
+  modal.classList.remove('hidden');
+  modal.classList.remove('animate__fadeOutDown');
+  modal.classList.add('animate__fadeInDown');
+})
+
+document.getElementById("modal").addEventListener("click", function () {
+  var modal = document.getElementById("modal");
+  modal.classList.remove('animate__fadeInDown');
+  modal.classList.add('animate__fadeOutDown');
+  setTimeout(function(){
+    modal.classList.add('hidden');
+  }, 1000);
+})
