@@ -4,10 +4,15 @@ let currentWordIndex = 0;
 
 function updateText() {
   for (let element of elements) {
-    element.textContent = words[currentWordIndex];
+    element.classList.add('flipping');
+    setTimeout(() => {
+      element.textContent = words[currentWordIndex];
+      element.classList.remove('flipping');
+    }, 250); // 250ms correspond à la moitié de la durée de la transition
   }
   currentWordIndex = (currentWordIndex + 1) % words.length;
 }
+
 
 setInterval(updateText, 2000);
 

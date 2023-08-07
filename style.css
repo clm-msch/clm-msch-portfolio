@@ -9,6 +9,17 @@
         animation: bounce 2s infinite;
       }
 
+      .anime-title {
+        display: inline-block;
+        perspective: 1000px; /* Profondeur de perspective 3D */
+        transition: all 0.5s ease-in-out; /* Durée de transition */
+      }
+      
+      .anime-title.flipping {
+        transform: rotateX(90deg); /* Rotation de 90 degrés */
+      }
+      
+
       @keyframes bounce {
         0%,
         20%,
