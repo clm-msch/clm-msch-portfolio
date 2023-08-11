@@ -18,7 +18,9 @@
       .anime-title.flipping {
         transform: rotateX(90deg); /* Rotation de 90 degrés */
       }
-      
+      .button {
+        background: var(--gradient, linear-gradient(144deg, #490A7A 0%, #0B14DE 100%));
+      }
 
       @keyframes bounce {
         0%,
