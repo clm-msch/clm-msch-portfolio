@@ -1,5 +1,5 @@
 const elements = document.querySelectorAll(".anime-title");
-const words = [" créatif", " curieux", " étudiant", " junior"];
+const words = [" créatif", " curieux", " étudiant", " junior", " full-stack", " passionné"];
 let currentWordIndex = 0;
 
 function updateText() {
@@ -73,3 +73,14 @@ document.getElementById("modal").addEventListener("click", function () {
     modal.classList.add('hidden');
   }, 1000);
 })
+
+// Animation du bouton contact
+var button = document.getElementById('animated-button');
+
+button.addEventListener('mouseenter', function() {
+    gsap.to(button, { duration: 0.5, scale: 1.10, backgroundColor: '#ff0' });
+});
+
+button.addEventListener('mouseleave', function() {
+    gsap.to(button, { duration: 0.3, scale: 1, backgroundColor: '#3490dc' });
+});
