@@ -15,8 +15,35 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
+		<!-- Google Tag Manager -->
+		<script>
+			;(function (w, d, s, l, i) {
+				w[l] = w[l] || []
+				w[l].push({
+					"gtm.start": new Date().getTime(),
+					event: "gtm.js",
+				})
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : ""
+				j.async = true
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+				f.parentNode.insertBefore(j, f)
+			})(window, document, "script", "dataLayer", "GTM-52XPW6X8")
+		</script>
+		<!-- End Google Tag Manager -->
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-52XPW6X8"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<!-- Navbar -->
 		<nav
 			style="margin: 0 auto; margin-top: 4px"
@@ -84,13 +111,19 @@
 						Menu
 					</h2>
 					<div class="space-y-2 text-center">
-						<a href="#section1" class="font-bold text-md block text-gray-900"
+						<a
+							href="#section1"
+							class="font-bold text-md block text-gray-900"
 							>A propos</a
 						>
-						<a href="#section2" class="font-bold text-md block text-gray-900"
+						<a
+							href="#section2"
+							class="font-bold text-md block text-gray-900"
 							>Mes expériences</a
 						>
-						<a href="#section3" class="font-bold text-md block text-gray-900"
+						<a
+							href="#section3"
+							class="font-bold text-md block text-gray-900"
 							>Mes projets</a
 						>
 						<br />
@@ -110,7 +143,9 @@
 			class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover text-white"
 			style="background-image: url('/src/img/background-2.svg')"
 		>
-			<h1 class="text-7xl font-black mb-4 mt-12 text-center text-gray-900">
+			<h1
+				class="text-7xl font-black mb-4 mt-12 text-center text-gray-900"
+			>
 				clément <br />
 				maschéroni
 			</h1>
@@ -302,16 +337,17 @@
 		</footer>
 		<script src="script-copy.js"></script>
 		<script>
-			window.axeptioSettings = {
-			  clientId: "65364d95d3639086db2eeeda",
-			  cookiesVersion: "clm-msch-fr",
-			};
-			 
-			(function(d, s) {
-			  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-			  e.async = true; e.src = "//static.axept.io/sdk.js";
-			  t.parentNode.insertBefore(e, t);
-			})(document, "script");
-			</script>
+			window.axeptioSettings = {
+				clientId: "65364d95d3639086db2eeeda",
+				cookiesVersion: "clm-msch-fr",
+			}
+			;(function (d, s) {
+				var t = d.getElementsByTagName(s)[0],
+					e = d.createElement(s)
+				e.async = true
+				e.src = "//static.axept.io/sdk.js"
+				t.parentNode.insertBefore(e, t)
+			})(document, "script")
+		</script>
 	</body>
 </html>
